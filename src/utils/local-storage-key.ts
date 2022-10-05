@@ -1,0 +1,1 @@
+export const LIST_FAVORITE:string = 'list-favorite'
