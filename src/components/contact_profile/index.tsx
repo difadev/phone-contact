@@ -88,7 +88,7 @@ export default function ContactProfile({ name, phone, id }: IPropsCardProfile) {
     return (
         <>
             <ContainerProfile >
-                <Image src={User} width={40} height={40} />
+                <Image src={User} width={40} height={40} alt="userImage"/>
                 <ContainerTitle data-testid="detailProfileTest" onClick={handleDetail}>
                     <TitleName data-testid="nameTest">
                         {`${name}`}

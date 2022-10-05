@@ -22,7 +22,7 @@ export default function EditContact({ show, setShow, id }: IPropsEditContact) {
     })
     const [update_contact_by_pk, { }] = useMutation(UPDATE_CONTACT, {
         onCompleted: (tData) => {
-            const newContact: any = tData?.insert_contact?.returning[0]
+            const newContact: any = tData?.update_contact_by_pk
             setStateFinish(true)
             finishSubmit(newContact)
         }
@@ -47,7 +47,8 @@ export default function EditContact({ show, setShow, id }: IPropsEditContact) {
     }
     const finishSubmit = (newValue: any) => {
         const newValueSubmit = [...context.listContact.listContact]
-        newValueSubmit.unshift(newValue)
+        const newValueEditIndex = newValueSubmit.findIndex((item) => item.id === newValue.id)
+        newValueSubmit[newValueEditIndex] = newValue;
         context.setListContact((prevState: any) => ({
             ...prevState,
             listContact: newValueSubmit,

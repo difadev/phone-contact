@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "test:ci": "jest --ci",
-    "test:one": "jest -w 1 --coverage -u"
+    "test": "jest test --setupFiles ",
+    "test:watch": "jest test --setupFiles --watch",
+    "test:coverage": "jest test --setupFiles --coverage",
+    "test:ci": "jest test --setupFiles --ci",
+    "test:one": "jest test --setupFiles -w 1 --coverage -u"
     
   },
   "dependencies": {

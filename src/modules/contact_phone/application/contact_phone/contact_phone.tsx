@@ -20,12 +20,11 @@ import SearchImage from '@/public/assets/icon/search.png'
 import ContactImage from '@/public/assets/icon/contact.png'
 import { IContext, IPropsContact, IPropsState, IPropsStateFavorite, IResponse } from './type';
 
-export default function ContactPhone({ lastContactProps }: IPropsContact) {
+export default function ContactPhone({ lastContactProps, setLastContactProps }: IPropsContact) {
 
     const context: IContext = useContext(AppContext)
     const listContactStateFavorite = context.listContact.listContactFavorite || []
     const [hasMore, setHasMore] = useState(false)
-    const [lastContact, setLastContact] = useState(lastContactProps)
     const [stateLoadData, setStateLoadData] = useState(initStateLoadData)
     const listContactState:any = context.listContact.listContact || []
     const { register } = useForm();
@@ -43,9 +42,9 @@ export default function ContactPhone({ lastContactProps }: IPropsContact) {
         onCompleted: (tData:IResponse) => {
             const newContact:any = tData?.contact
             if (newContact.length < 10) {
-                setLastContact(true)
+                setLastContactProps(true)
             } else {
-                setLastContact(false)
+                setLastContactProps(false)
             }
 
             if (hasMore) {
@@ -177,7 +176,7 @@ export default function ContactPhone({ lastContactProps }: IPropsContact) {
                 <Cards styleProps={{ marginTop: '1.5em', padding: '.5em 1em', overflow:'auto' }} title="LIST CONTACT">
                     {generateRenderContact()}
                 </Cards>
-                {!lastContact && (
+                {!lastContactProps && (
                     <Buttons type="button" styleProps={{ marginTop: '1em' }} title={loading ? 'Loading ...' : 'Load More'} onClick={onHandleLoadMore} />
                 )}
             </ContainerCard>

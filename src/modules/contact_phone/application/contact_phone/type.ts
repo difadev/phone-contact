@@ -26,7 +26,8 @@ export interface IContext {
 }
 
 export interface IPropsContact {
-  lastContactProps:boolean
+  lastContactProps:boolean,
+  setLastContactProps: any
 }
 
 export interface IResponse {

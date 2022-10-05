@@ -2,7 +2,7 @@ import { MockedProvider } from "@apollo/client/testing";
 import { render, screen, fireEvent } from '@testing-library/react'
 import { AppContext } from "@/context/app-context";
 import '@testing-library/jest-dom';
-import Detail from '../[id]'
+import Detail from '@/pages/contact/detail/[id]'
 import { DETAIL_CONTACT } from '@/graphql/contact/queries';
 import { act } from "react-dom/test-utils";
 
@@ -60,25 +60,5 @@ describe('Detail', () => {
       fireEvent.click(editContactTest)
     })
     expect(editContactTest).toBeInTheDocument()
-  });
-
-  it("should render New Phone", async  () => {
-    render(
-      <MockedProvider mocks={mock} addTypename={false}>
-        <AppContext.Provider value={appContextValue}>
-          <Detail />
-        </AppContext.Provider>
-      </MockedProvider>
-    )
-    const newPhoneTest = screen.getByTestId('newPhoneTest')
-    act(() => {
-      fireEvent.click(newPhoneTest)
-    })
-    const containerPhoneTest = screen.getByTestId('containerPhoneTest')
-    expect(containerPhoneTest).toBeInTheDocument()
-    const buttonCloseTest = screen.getByTestId('buttonCloseTest')
-    act(() => {
-      fireEvent.click(buttonCloseTest)
-    })
   });
 })
