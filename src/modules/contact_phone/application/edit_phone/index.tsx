@@ -31,7 +31,7 @@ export default function EditPhone({show, setShow, id, phoneNumber}:IPropsEditPho
                     number: phoneNumber,
                     contact_id: id
                 } ,
-                new_phone_number: stateData.new_phone_number
+                new_phone_number: stateData.phone_number
             }
         })
     }
