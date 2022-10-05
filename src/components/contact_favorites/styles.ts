@@ -22,6 +22,8 @@ text-align:center;
 export const TitleName = styled.h5`
 font-size:12px;
 color:#2f395e;
+max-width: 70px;
+word-break: break-word;
 margin:3px;
 & :hover{
     color: #2d344d;

@@ -21,7 +21,8 @@ export const TitleName = styled.p `
     margin: 0px;
     font-size: 14px;
     color:#5b6487;
-
+    max-width: 210px;
+    word-break: break-word;
     &:hover {
         color: #2d344d;
     }
@@ -41,7 +42,7 @@ export const ContainerIcon = styled.div`
 `
 
 export const ContainerSlide = styled.div`
-    right: ${(props:{slideData?:boolean}) => (props.slideData ? '20px' : '-100px')};
+    right: ${(props:{slideData?:boolean}) => (props.slideData ? '20px' : '-120px')};
     background: #756cbd;
     position: absolute;
     top: 10px;

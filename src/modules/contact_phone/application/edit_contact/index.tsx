@@ -93,7 +93,7 @@ export default function EditContact({ show, setShow, id }: IPropsEditContact) {
                     loading ? <p data-testid="text-loading">Loading</p> : (
                         <ContainerEdit data-testid="containerEditTest">
                             <ButtonContainer data-testid="buttonCloseTest"  onClick={closeModal}>
-                                <Image src={CloseImage} alt="button-close" width={10} height={10} />
+                                <Image src={CloseImage} alt="button-close" width={14} height={14} />
                             </ButtonContainer>
                             <FormContact stateFinish={stateFinish} type="edit" dataProps={data?.contact_by_pk} onChangeData={onChangeData} loading={loading} finishSubmit={handleAfterSubmit} />
                         </ContainerEdit>

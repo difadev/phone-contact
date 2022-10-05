@@ -50,6 +50,7 @@ export default function EditPhone({show, setShow, id, phoneNumber}:IPropsEditPho
            isOpen={show}
            onAfterOpen={()=>{}}
            onRequestClose={closeModal}
+           ariaHideApp={false}
            style={
             {
                 content: {
@@ -77,7 +78,7 @@ export default function EditPhone({show, setShow, id, phoneNumber}:IPropsEditPho
         }
             <ContainerContent data-testid="containerEditPhone">
                 <ButtonContainer onClick={closeModal}>
-                    <Image src={CloseImage} alt="button-close" width={10} height={10}/>
+                    <Image src={CloseImage} alt="button-close" width={14} height={14}/>
                 </ButtonContainer>
                 <FormPhone stateFinish={stateFinish} type="edit" dataProps={phoneNumber}  finishSubmit={handleAfterSubmit} loading={loading}/>
               </ContainerContent>

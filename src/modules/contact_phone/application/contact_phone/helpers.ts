@@ -1,4 +1,3 @@
-import {mq} from '@/utils/global-style'
 
 export const initStateLoadData = 
 {
@@ -13,5 +12,5 @@ export const settingsSlider = {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
-    arrows: false
+    arrows: true
 };

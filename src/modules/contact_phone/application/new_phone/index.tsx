@@ -59,7 +59,7 @@ export default function NewPhone({show, setShow, id }:IPropsNewPhone) {
          >
             <ContainerPhone data-testid="containerPhoneTest">
                 <ButtonContainer data-testid="buttonCloseTest" onClick={closeModal}>
-                    <Image src={CloseImage} alt="button-close" width={10} height={10}/>
+                    <Image src={CloseImage} alt="button-close" width={14} height={14}/>
                 </ButtonContainer>
                 <FormPhone stateFinish={stateFinish} type="add" loading={loading} finishSubmit={handleAfterSubmit} error={error}/>
             </ContainerPhone>

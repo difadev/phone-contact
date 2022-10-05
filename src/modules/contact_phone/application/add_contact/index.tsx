@@ -71,7 +71,7 @@ export default function AddContact({show, setShow }:IPropsEditContact) {
          >
             <ContainerNewContact data-testid="containerNewContactTest">
                 <ContainerButton onClick={closeModal} data-testid="buttonCloseTest">
-                    <Image src={Close} alt="button-close" width={10} height={10}/>
+                    <Image src={Close} alt="button-close" width={14} height={14}/>
                 </ContainerButton>
                 <FormContact loading={loading} type="add" stateFinish={stateFinish} finishSubmit={handleAfterSubmit} error={error} />
             </ContainerNewContact>

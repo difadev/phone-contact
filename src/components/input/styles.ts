@@ -7,7 +7,7 @@ export const ContainerCard = styled.div`
 `
 export const InputComponent = styled.input`
     width: 100%;
-    padding: .5em 1em;
+    padding: 1em 1em;
     border-radius: 4px;
     border: none;
     background:  ${(props:{styleProps?:any}) => (props.styleProps?.background ? props.styleProps.background : '#ffffff')}

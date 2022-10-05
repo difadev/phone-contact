@@ -78,7 +78,7 @@ export default function DeleteProfile({ show, setShow, id }: IPropsDeleteContact
             >
                 <ContainerContent data-testid="containerDelete">
                     <ButtonContainer onClick={closeModal}>
-                        <Image src={CloseImage} alt="button-close" width={10} height={10} />
+                        <Image src={CloseImage} alt="button-close" width={14} height={14} />
                     </ButtonContainer>
                     {
                         error && (

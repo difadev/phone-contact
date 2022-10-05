@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 export const ButtonContainerPrimary = styled.button`
     border: none;
     background:#8998d6;
-    padding: .7em .5em;
+    padding: 1em .5em;
     color: white;
     border-radius: 6px;
     width: 100%;
@@ -17,7 +17,7 @@ export const ButtonContainerPrimary = styled.button`
 export const ButtonContainerDanger = styled.button`
     border: none;
     background:#eb5e5e;
-    padding: .7em .5em;
+    padding: 1em .5em;
     color: white;
     border-radius: 6px;
     width: 100%;
@@ -30,7 +30,7 @@ export const ButtonContainerDanger = styled.button`
 export const ButtonContainerSuccess = styled.button`
     border: none;
     background:#3fba85;
-    padding: .7em .5em;
+    padding: 1em .5em;
     color: white;
     border-radius: 6px;
     width: 100%;
@@ -42,7 +42,7 @@ export const ButtonContainerSuccess = styled.button`
 export const ButtonContainerDefault = styled.button`
     border: none;
     background:#d3d8e3;
-    padding: .7em .5em;
+    padding: 1em .5em;
     color: white;
     border-radius: 6px;
     width: 100%;

@@ -11,7 +11,7 @@ export default function ButtonIcon({srcIcon, styleProps, onClick, dataTest = 'bu
 
     return ( 
         <ButtonContainer data-testid={dataTest} style={styleProps} onClick={onClickButton}> 
-            <Image src={srcIcon} alt="button-icon" height={14} width={14} />
+            <Image src={srcIcon} alt="button-icon" height={16} width={16} />
         </ButtonContainer>
     )
   }
